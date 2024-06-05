@@ -1,0 +1,16 @@
+﻿@model GTSLQP_ContactManager.Models.Contact
+@{
+    ViewData["Title"] = "Delete Contact";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>Are you sure you want to delete this <b>@Model.FirstName @Model.LastName?</b></p>
+
+<div>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="ContactId" />
+        <button type="submit" class="btn btn-info">Yes</button>
+        <a asp-controller="Home" asp-action="index" class="btn btn-info">No</a>
+    </form>
+</div>
